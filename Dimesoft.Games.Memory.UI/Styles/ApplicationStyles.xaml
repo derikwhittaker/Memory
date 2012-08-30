@@ -1,0 +1,439 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Dimesoft.Games.Memory.Styles" xmlns:sys="using:System">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Common/StandardStyles.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Color x:Key="GameboardPlayareaBackgroundColor">#FFFFF4D1</Color>
+    <Color x:Key="TextTitleColor">#FFFFF4D1</Color>
+    <!--<Color x:Key="TextHighlightColor">#FFBFBFBF</Color>
+    <Color x:Key="TextDarklightColor">#FF383B42</Color>-->
+    <Color x:Key="TextHighlightColor">#FFBFBFBF</Color>
+    <Color x:Key="TextDarklightColor">#FF383B42</Color>    
+
+    <Color x:Key="DashboardBackgroundColor">#FF383B42</Color>
+    <Color x:Key="GameboardBackgroundColor">#FF383B42</Color>
+    <Color x:Key="GameboardTileColor">#FF446573</Color>
+
+    <SolidColorBrush x:Key="DashboardBackgroundBrush" Color="{StaticResource DashboardBackgroundColor}" />
+    <SolidColorBrush x:Key="GameboardBackgroundBrush" Color="{StaticResource GameboardBackgroundColor}" />
+    <SolidColorBrush x:Key="GameboardPlayareaBackgroundBrush" Color="{StaticResource GameboardPlayareaBackgroundColor}" />
+    <SolidColorBrush x:Key="GameboardTileBrush" Color="{StaticResource GameboardTileColor}" />
+
+    <SolidColorBrush x:Key="TextTitleBrush" Color="{StaticResource TextTitleColor}" />
+    <SolidColorBrush x:Key="TextHighlightBrush" Color="{StaticResource TextHighlightColor}" />
+    <SolidColorBrush x:Key="TextDarklightBrush" Color="{StaticResource TextDarklightColor}" />
+
+    <SolidColorBrush x:Key="GameboardAppBarBrush" Color="{StaticResource GameboardTileColor}" />
+
+    <Style x:Key="AddUserAppBarButtonStyle" TargetType="Button" BasedOn="{StaticResource AppBarButtonStyle}">
+        <Setter Property="AutomationProperties.AutomationId" Value="AddAppBarButton"/>
+        <Setter Property="AutomationProperties.Name" Value="Add User"/>
+        <Setter Property="Content" Value="&#xE109;"/>
+    </Style>
+    
+    <Style x:Key="EasyGameAppBarButtonStyle" TargetType="Button" BasedOn="{StaticResource AppBarButtonStyle}">
+        <Setter Property="AutomationProperties.AutomationId" Value="PinAppBarButton"/>
+        <Setter Property="AutomationProperties.Name" Value="Easy"/>
+        <Setter Property="Content" Value="&#xE141;"/>
+    </Style>
+    
+    <Style x:Key="MediumAppBarButtonStyle" TargetType="Button" BasedOn="{StaticResource AppBarButtonStyle}">
+        <Setter Property="AutomationProperties.AutomationId" Value="PinAppBarButton"/>
+        <Setter Property="AutomationProperties.Name" Value="Medium"/>
+        <Setter Property="Content" Value="&#xE141;"/>
+    </Style>
+    
+    <Style x:Key="HardAppBarButtonStyle" TargetType="Button" BasedOn="{StaticResource AppBarButtonStyle}">
+        <Setter Property="AutomationProperties.AutomationId" Value="PinAppBarButton"/>
+        <Setter Property="AutomationProperties.Name" Value="Hard"/>
+        <Setter Property="Content" Value="&#xE141;"/>
+    </Style>
+    
+    <Style x:Key="PinAppBarButtonStyle" TargetType="Button" BasedOn="{StaticResource AppBarButtonStyle}">
+        <Setter Property="AutomationProperties.AutomationId" Value="PinAppBarButton"/>
+        <Setter Property="AutomationProperties.Name" Value="Pin"/>
+        <Setter Property="Content" Value="&#xE141;"/>
+    </Style>
+
+    <Style x:Key="UnPinAppBarButtonStyle" TargetType="Button" BasedOn="{StaticResource AppBarButtonStyle}">
+        <Setter Property="AutomationProperties.AutomationId" Value="PinAppBarButton"/>
+        <Setter Property="AutomationProperties.Name" Value="Unpin"/>        
+        <Setter Property="Content" Value="&#xE196;"/>
+    </Style>
+
+    <Style x:Key="ShuffleAppBarButtonStyle" TargetType="Button" BasedOn="{StaticResource AppBarButtonStyle}">
+        <Setter Property="AutomationProperties.AutomationId" Value="ShuffleAppBarButton"/>
+        <Setter Property="AutomationProperties.Name" Value="Shuffle"/>
+        <Setter Property="Content" Value="&#xE117;"/>
+    </Style>
+    
+    <Style x:Key="ResetAppBarButtonStyle" TargetType="Button" BasedOn="{StaticResource AppBarButtonStyle}">
+        <Setter Property="AutomationProperties.AutomationId" Value="ResetAppBarButton"/>
+        <Setter Property="AutomationProperties.Name" Value="Reset"/>
+        <Setter Property="Content" Value="&#xE117;"/>
+    </Style>
+    
+    <Style x:Key="SettingsHeaderTextStyle" TargetType="TextBlock" BasedOn="{StaticResource BaselineTextStyle}">
+        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="FontWeight" Value="Light"/>       
+        <Setter Property="LineHeight" Value="36"/>
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <TranslateTransform X="-2" Y="8"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="TextWrapping" Value="NoWrap"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Margin" Value="0,0,40,40"/>
+        <Setter Property="Foreground"  Value="White" />
+    </Style>
+
+    <Style x:Key="BoardPageHeaderTextStyle" TargetType="TextBlock" BasedOn="{StaticResource BaselineTextStyle}">
+        <Setter Property="FontSize" Value="56"/>
+        <Setter Property="FontWeight" Value="Light"/>
+        <Setter Property="LineHeight" Value="40"/>
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <TranslateTransform X="-2" Y="8"/>
+            </Setter.Value>
+        </Setter>        
+        <Setter Property="TextWrapping" Value="NoWrap"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Margin" Value="0,0,40,40"/>
+        <Setter Property="Foreground"  Value="{StaticResource TextTitleBrush}" />
+    </Style>
+    
+    <Style x:Key="BoardPageSubHeaderTextStyle" TargetType="TextBlock" BasedOn="{StaticResource BaselineTextStyle}">
+        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="FontWeight" Value="Light"/>
+        <Setter Property="LineHeight" Value="40"/>
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <TranslateTransform X="-2" Y="8"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="TextWrapping" Value="NoWrap"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Margin" Value="0,0,40,20"/>
+        <Setter Property="Foreground"  Value="{StaticResource TextTitleBrush}" />
+    </Style>    
+
+    <Style x:Key="DashboardTitleTextStyle" TargetType="TextBlock" BasedOn="{StaticResource BaselineTextStyle}">
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="18"/>
+    </Style>
+
+    <Style x:Key="BoardInformationTitleTextStyle" TargetType="TextBlock" BasedOn="{StaticResource BaselineTextStyle}">
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="18"/>
+    </Style>
+    
+    <Style x:Key="FlyoutTextHeaderStyle" TargetType="TextBlock" BasedOn="{StaticResource BaselineTextStyle}">
+        <Setter Property="FontSize" Value="28"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="LineHeight" Value="30" />
+        <Setter Property="TextWrapping" Value="NoWrap"/>
+        <Setter Property="Foreground"  Value="Black" />
+    </Style>
+
+    <Style x:Key="FlyoutTextLableStyle" TargetType="TextBlock" BasedOn="{StaticResource BaselineTextStyle}">
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="LineHeight" Value="24" />
+        <Setter Property="TextWrapping" Value="NoWrap"/>
+        <Setter Property="Foreground"  Value="Black" />
+    </Style>
+    
+    <Style x:Key="LeaderBoardHeaderTextStyle" TargetType="TextBlock" BasedOn="{StaticResource BaselineTextStyle}">
+        <Setter Property="FontSize" Value="32"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="LineHeight" Value="36" />
+        <Setter Property="TextWrapping" Value="NoWrap"/>
+        <Setter Property="Foreground"  Value="{StaticResource TextTitleBrush}" />
+    </Style>
+
+    <Style x:Key="BoardInformationTileDisplayTextStyle" TargetType="TextBlock" BasedOn="{StaticResource BaselineTextStyle}">
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="FontSize" Value="38"/>
+        <Setter Property="Foreground"  Value="{StaticResource TextTitleBrush}" />
+    </Style>
+    
+    <Style x:Key="BoardInformationSnappedTileDisplayTextStyle" TargetType="TextBlock" BasedOn="{StaticResource BaselineTextStyle}">
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="Foreground"  Value="{StaticResource TextTitleBrush}" />
+    </Style>
+
+    <Style x:Key="BoardInformationTileAltTextStyle" TargetType="TextBlock" BasedOn="{StaticResource BaselineTextStyle}">
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Foreground"  Value="{StaticResource TextHighlightBrush}" />        
+    </Style>
+    
+    <Style x:Key="BoardInformationSnappedTileAltTextStyle" TargetType="TextBlock" BasedOn="{StaticResource BaselineTextStyle}">
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground"  Value="{StaticResource TextHighlightBrush}" />
+    </Style>
+
+    <Style x:Key="BoardInformationTileStyle" TargetType="Border">
+        <!--<Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="Background" Value="{StaticResource GameboardTileBrush}" />-->
+        <Setter Property="Width" Value="135" />
+        <Setter Property="Height" Value="135" />
+    </Style>
+
+    <Style x:Key="GameboardCardTileEasyModeStyle" TargetType="Border">
+        <Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="Background" Value="{StaticResource GameboardTileBrush}" />
+        <Setter Property="Width" Value="150" />
+        <Setter Property="Height" Value="150" />
+    </Style>
+
+    <Style x:Key="GameboardEasyStyle" TargetType="GridView">
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="GameboardMediumStyle" TargetType="GridView">
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="GameboardHardStyle" TargetType="GridView">
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+    </Style>
+    
+    <!--<Style x:Key="WatermarkedTextBoxStyle" TargetType="TextBox">
+        <Setter Property="Height" Value="25" />
+        <Setter Property="Margin" Value="2" />
+        <Setter Property="Padding" Value="4,2,2,2"/>
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}" />
+        <Setter Property="Foreground" Value="{StaticResource SmallFontColorBrush}" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ControlBorderColorBrush}" />
+        <Setter Property="Background" Value="{StaticResource ControlCutoutBackgroundBrush}" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Grid x:Name="RootElement">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="Border">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ControlCutoutBorderMouseOverBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0" To=".55" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="ContentElement"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="ReadOnly">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="Background" Storyboard.TargetName="Border">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ControlCutoutBackgroundReadOnlyBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused">
+                                    <Storyboard Duration="0">
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="FocusBorder" Storyboard.TargetProperty="Opacity">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="1" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unfocused">
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="ValidationStates">
+                                <VisualState x:Name="Valid"/>
+                                <VisualState x:Name="InvalidUnfocused">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="ValidationErrorElement">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="InvalidFocused">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="ValidationErrorElement">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="IsOpen" Storyboard.TargetName="validationTooltip">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <sys:Boolean>True</sys:Boolean>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="FocusBorder" Storyboard.TargetProperty="Opacity">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="1" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="FocusBorder" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AlertColorBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Border x:Name="FocusBorder" BorderBrush="{StaticResource ControlCutoutFocusOuterGlowBrush}" BorderThickness="2" 
+                                CornerRadius="6" Opacity="0" Background="{StaticResource ControlCutoutFocusOuterGlowBrush}"
+                                Margin="-2"
+                                />
+                        <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="4" Opacity="1">
+                            <Grid>
+                                <ScrollViewer x:Name="ContentElement" BorderThickness="0" IsTabStop="False" Padding="{TemplateBinding Padding}"
+                                            VerticalAlignment="Center" 
+                                            />
+                                <TextBlock x:Name="waterMark" Text="{Binding WaterMark, RelativeSource={RelativeSource TemplatedParent}}" 
+                                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                            Visibility="{Binding IsWaterMarkVisible, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource VisibilityOfBool}, FallbackValue=false}"
+                                            FontStyle="Italic" FontFamily="{StaticResource PrimaryFont}" Foreground="{StaticResource PrimaryFontBrush}" FontSize="12"  
+                                            />
+                            </Grid>
+                        </Border>
+                        <Rectangle x:Name="DisabledVisualElement" Fill="White" IsHitTestVisible="false" Opacity="0" RadiusY="4" RadiusX="4"/>
+                        <Border x:Name="ValidationErrorElement" BorderBrush="{StaticResource AlertColorBrush}" BorderThickness="1" CornerRadius="4" Visibility="Collapsed">
+                            <ToolTipService.ToolTip>
+                                <ToolTip x:Name="validationTooltip" Template="{StaticResource ControlValidationToolTipTemplate}" DataContext="{Binding RelativeSource={RelativeSource TemplatedParent}}" Placement="Right" PlacementTarget="{Binding RelativeSource={RelativeSource TemplatedParent}}" >
+                                    <ToolTip.Triggers>
+                                        <EventTrigger RoutedEvent="Canvas.Loaded">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="IsHitTestVisible" Storyboard.TargetName="validationTooltip">
+                                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                                            <DiscreteObjectKeyFrame.Value>
+                                                                <sys:Boolean>true</sys:Boolean>
+                                                            </DiscreteObjectKeyFrame.Value>
+                                                        </DiscreteObjectKeyFrame>
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                    </ToolTip.Triggers>
+                                </ToolTip>
+                            </ToolTipService.ToolTip>
+                            <Grid Background="Transparent" HorizontalAlignment="Right" Height="8" Margin="0,0,4,0" VerticalAlignment="Center" Width="8">
+                                <Assets:CrossOut Height="8" Width="8" Fill="{StaticResource AlertColorBrush}" />
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+
+    <DataTemplate x:Key="DashboardTilesStyle">
+        <Grid HorizontalAlignment="Left" Width="225" Height="450">
+            <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                <Image Source="{Binding Image, Mode=TwoWay}" Stretch="UniformToFill"/>
+            </Border>
+            <!--<StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundBrush}">
+                <TextBlock Text="{Binding Title, Mode=TwoWay}" 
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Stretch"
+                           Foreground="{StaticResource ListViewItemOverlayTextBrush}" 
+                           Style="{StaticResource DashboardTitleTextStyle}" Height="45" Margin="0,10,0,0" />
+                <TextBlock Text="{Binding Subtitle}" Foreground="{StaticResource ListViewItemOverlaySecondaryTextBrush}" Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>-->
+            <!--</StackPanel>-->
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="GameboardCardTileEasyModeDataTemplate">
+        <Grid HorizontalAlignment="Left" Width="175" Height="175">
+            <Border CornerRadius="10" >
+                <Image Width="175" Height="175" Source="{Binding Image}" Stretch="Uniform" />
+            </Border>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="GameboardCardTileMediumModeDataTemplate">
+        <Grid HorizontalAlignment="Left" Width="145" Height="145">
+            <Border CornerRadius="10" >
+                <Image Width="145" Height="145" Source="{Binding Image}" Stretch="Uniform" />
+            </Border>
+        </Grid>    
+    </DataTemplate>
+
+    <DataTemplate x:Key="GameboardCardTileHardModeDataTemplate">
+        <Grid HorizontalAlignment="Left" Width="125" Height="125">
+            <Border CornerRadius="10" >
+                <Image Width="125" Height="125" Source="{Binding Image}" Stretch="Uniform" />
+            </Border>
+        </Grid>
+    </DataTemplate>
+    
+    <DataTemplate x:Key="GameboardCardTileEasySnappedDataTemplate">
+        <Grid HorizontalAlignment="Left" Width="90" Height="90">
+            <Border CornerRadius="10" >
+                <Image Width="90" Height="90" Source="{Binding Image}" Stretch="Uniform" />
+            </Border>
+        </Grid>
+    </DataTemplate>
+    
+    <DataTemplate x:Key="GameboardCardTileMediumSnappedDataTemplate">
+        <Grid HorizontalAlignment="Left" Width="80" Height="75">
+            <Border CornerRadius="10" >
+                <Image Width="80" Height="75" Source="{Binding Image}" Stretch="Uniform" />
+            </Border>
+        </Grid>
+    </DataTemplate>
+    
+   <DataTemplate x:Key="GameboardCardTileHardSnappedDataTemplate">
+        <Grid HorizontalAlignment="Left" Width="80" Height="75">
+            <Border CornerRadius="10" >
+                <Image Width="80" Height="75" Source="{Binding Image}" Stretch="Uniform" />
+            </Border>
+        </Grid>
+    </DataTemplate>
+    
+    <DataTemplate x:Key="GameboardCardTileEasyFilledDataTemplate">
+        <Grid HorizontalAlignment="Left" Width="155" Height="155">
+            <Border CornerRadius="10" >
+                <Image Width="155" Height="155" Source="{Binding Image}" Stretch="Uniform" />
+            </Border>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="GameboardCardTileMediumFilledDataTemplate">
+        <Grid HorizontalAlignment="Left" Width="140" Height="140">
+            <Border CornerRadius="10" >
+                <Image Width="140" Height="140" Source="{Binding Image}" Stretch="Uniform" />
+            </Border>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="GameboardCardTileHardFilledDataTemplate">
+        <Grid HorizontalAlignment="Left" Width="100" Height="100">
+            <Border CornerRadius="10" >
+                <Image Width="100" Height="100" Source="{Binding Image}" Stretch="Uniform" />
+            </Border>
+        </Grid>
+    </DataTemplate>
+    
+    
+
+</ResourceDictionary>

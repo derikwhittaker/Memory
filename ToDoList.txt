@@ -1,0 +1,11 @@
+- Update the UI of the 'Add use' Drop down
+	-> Fix the text issue in the text box
+- Add Validation to the add use dialog
+XXX if the user does not select an image, use the guest image
+- Change the Level buttons on the app bar
+XXX animations on the back button.  fade out the content
+XXX fix the issue where the game time is not saved between app runs
+- animations on 'you won'
+- Settings
+	-> save the preference of what level to start w/ by default
+	XXX -> use the preferences when loading the board

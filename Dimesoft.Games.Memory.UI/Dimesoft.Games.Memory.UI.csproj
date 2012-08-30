@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24DD6A06-9876-4274-847C-48F257E4FC43}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dimesoft.Games.Memory</RootNamespace>
+    <AssemblyName>Dimesoft.Games.Memory</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>Dimesoft.Games.Memory.UI_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>9C8340AAC4C2871138A3441315A0428F475018ED</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExpressRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExpressRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExpressRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExpressRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExpressRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExpressRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <ProjectReference Include="..\Dimesoft.Games.Memory.Domain\Dimesoft.Games.Memory.Domain.csproj">
+      <Project>{3cfa2998-e165-4c5a-b13e-944af3feaf72}</Project>
+      <Name>Dimesoft.Games.Memory.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NotificationsExtensions\NotificationsExtensions.csproj">
+      <Project>{6e87464b-b064-40ca-8161-7c18c337adff}</Project>
+      <Name>NotificationsExtensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\BaseViewModel.cs" />
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\MemoryRandomAccessStream.cs" />
+    <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\GameBoardGridStyleConverter.cs" />
+    <Compile Include="Converters\GameBoardTileStyleTemplateSelector.cs" />
+    <Compile Include="Dashboard.xaml.cs">
+      <DependentUpon>Dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SampleDashboardDataSource.cs" />
+    <Compile Include="DataModel\SampleLeaderBoardItemSource.cs" />
+    <Compile Include="DataModel\SampleMemoryCardDataSource.cs" />
+    <Compile Include="Managers\AudioManager.cs" />
+    <Compile Include="Managers\PinManager.cs" />
+    <Compile Include="Managers\StartupManager.cs" />
+    <Compile Include="Managers\StorageManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataModel\SampleDataSource.cs" />
+    <Compile Include="Common\BindableBase.cs" />
+    <Compile Include="Common\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Common\BooleanNegationConverter.cs" />
+    <Compile Include="Common\LayoutAwarePage.cs" />
+    <Compile Include="Common\RichTextColumns.cs" />
+    <Compile Include="Shared\StorageFileHelper.cs" />
+    <Compile Include="ViewModels\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\GameboardCardSetItem.cs" />
+    <Compile Include="ViewModels\GameBoardViewModel.cs" />
+    <Compile Include="ViewModels\GameLeaderBoardItem.cs" />
+    <Compile Include="ViewModels\GeneralSettingsViewModel.cs" />
+    <Compile Include="ViewModels\UsersViewModel.cs" />
+    <Compile Include="Views\AddUserPage.xaml.cs">
+      <DependentUpon>AddUserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\WatermarkedTextBox.cs" />
+    <Compile Include="Views\GameBoardPage.xaml.cs">
+      <DependentUpon>GameBoardPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GeneralSettingsPage.xaml.cs">
+      <DependentUpon>GeneralSettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Junk.xaml.cs">
+      <DependentUpon>Junk.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="Assets\Category\Shapes\Shapes.psd" />
+    <None Include="Common\ReadMe.txt" />
+    <None Include="Dimesoft.Games.Memory.UI_TemporaryKey.pfx" />
+    <None Include="Dimesoft.Games.Memory_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Common\StandardStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dashboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ApplicationStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Views\AddUserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GameBoardPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GeneralSettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Junk.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight.Extras.Win8">
+      <HintPath>..\Libraries\MvvMLight\GalaSoft.MvvmLight.Extras.Win8.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Win8">
+      <HintPath>..\Libraries\MvvMLight\GalaSoft.MvvmLight.Win8.dll</HintPath>
+    </Reference>
+    <Reference Include="XAMLMetroAppIsolatedStorageHelper">
+      <HintPath>..\Libraries\StorageHelper\XAMLMetroAppIsolatedStorageHelper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\150x150PinTile.png" />
+    <Content Include="Assets\150x150Tile.png" />
+    <Content Include="Assets\30x30Tile.png" />
+    <Content Include="Assets\310x150Tile.png" />
+    <Content Include="Assets\AnimalsSecondaryTile.png" />
+    <Content Include="Assets\Category\AnimalsHomeTile.png" />
+    <Content Include="Assets\Category\Animals\Ape.png" />
+    <Content Include="Assets\Category\Animals\Elephant.png" />
+    <Content Include="Assets\Category\Animals\Elk.png" />
+    <Content Include="Assets\Category\Animals\Gator.png" />
+    <Content Include="Assets\Category\Animals\Giraffe.png" />
+    <Content Include="Assets\Category\Animals\Hippo.png" />
+    <Content Include="Assets\Category\Animals\Lion.png" />
+    <Content Include="Assets\Category\Animals\Osterage.png" />
+    <Content Include="Assets\Category\Animals\Rhino.png" />
+    <Content Include="Assets\Category\Animals\Snake.png" />
+    <Content Include="Assets\Category\Animals\Tiger.png" />
+    <Content Include="Assets\Category\Animals\Zebra.png" />
+    <Content Include="Assets\Category\BackOfCard.png" />
+    <Content Include="Assets\Category\ColorsHomeTile.png" />
+    <Content Include="Assets\Category\Colors\black.png" />
+    <Content Include="Assets\Category\Colors\blue.png" />
+    <Content Include="Assets\Category\Colors\brightPink.png" />
+    <Content Include="Assets\Category\Colors\brown.png" />
+    <Content Include="Assets\Category\Colors\green.png" />
+    <Content Include="Assets\Category\Colors\lime.png" />
+    <Content Include="Assets\Category\Colors\NoMatch.png" />
+    <Content Include="Assets\Category\Colors\orange.png" />
+    <Content Include="Assets\Category\Colors\purple.png" />
+    <Content Include="Assets\Category\Colors\red.png" />
+    <Content Include="Assets\Category\Colors\seaFoamBlue.png" />
+    <Content Include="Assets\Category\Colors\slateGray.png" />
+    <Content Include="Assets\Category\Colors\yellow.png" />
+    <Content Include="Assets\Category\LettersHomeTile.png" />
+    <Content Include="Assets\Category\Letters\A.png" />
+    <Content Include="Assets\Category\Letters\B.png" />
+    <Content Include="Assets\Category\Letters\C.png" />
+    <Content Include="Assets\Category\Letters\D.png" />
+    <Content Include="Assets\Category\Letters\E.png" />
+    <Content Include="Assets\Category\Letters\F.png" />
+    <Content Include="Assets\Category\Letters\G.png" />
+    <Content Include="Assets\Category\Letters\H.png" />
+    <Content Include="Assets\Category\Letters\I.png" />
+    <Content Include="Assets\Category\Letters\J.png" />
+    <Content Include="Assets\Category\Letters\K.png" />
+    <Content Include="Assets\Category\Letters\L.png" />
+    <Content Include="Assets\Category\Letters\M.png" />
+    <Content Include="Assets\Category\Letters\N.png" />
+    <Content Include="Assets\Category\Letters\O.png" />
+    <Content Include="Assets\Category\Letters\P.png" />
+    <Content Include="Assets\Category\Letters\Q.png" />
+    <Content Include="Assets\Category\Letters\R.png" />
+    <Content Include="Assets\Category\Letters\S.png" />
+    <Content Include="Assets\Category\Letters\T.png" />
+    <Content Include="Assets\Category\Letters\U.png" />
+    <Content Include="Assets\Category\Letters\V.png" />
+    <Content Include="Assets\Category\Letters\W.png" />
+    <Content Include="Assets\Category\Letters\X.png" />
+    <Content Include="Assets\Category\Letters\Y.png" />
+    <Content Include="Assets\Category\Letters\Z.png" />
+    <Content Include="Assets\Category\ShapesHomeTile.png" />
+    <Content Include="Assets\Category\Shapes\Circle.png" />
+    <Content Include="Assets\Category\Shapes\Cresent.png" />
+    <Content Include="Assets\Category\Shapes\CurvilinearTriangle.png" />
+    <Content Include="Assets\Category\Shapes\Diamond.png" />
+    <Content Include="Assets\Category\Shapes\Ellipse.png" />
+    <Content Include="Assets\Category\Shapes\Hexigon.png" />
+    <Content Include="Assets\Category\Shapes\Octogon.png" />
+    <Content Include="Assets\Category\Shapes\Oval.png" />
+    <Content Include="Assets\Category\Shapes\Parralelogram.png" />
+    <Content Include="Assets\Category\Shapes\Pentagon.png" />
+    <Content Include="Assets\Category\Shapes\Quadrefoil.png" />
+    <Content Include="Assets\Category\Shapes\Rectangle.png" />
+    <Content Include="Assets\Category\Shapes\Square.png" />
+    <Content Include="Assets\Category\Shapes\Trapezoid.png" />
+    <Content Include="Assets\Category\Shapes\Triangle.png" />
+    <Content Include="Assets\ColorsSecondaryTile.png" />
+    <Content Include="Assets\DarkGray.png" />
+    <Content Include="Assets\LettersSecondaryTile.png" />
+    <Content Include="Assets\LightGray.png" />
+    <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\MediumGray.png" />
+    <Content Include="Assets\ShapesSecondaryTile.png" />
+    <Content Include="Assets\SmallLogo.png" />
+    <Content Include="Assets\Sounds\SelectedItemMatchAudio.mp3" />
+    <Content Include="Assets\Sounds\SelectItemAudio.mp3" />
+    <Content Include="Assets\Sounds\WonGameAudio.mp3" />
+    <Content Include="Assets\SplashLogo.png" />
+    <Content Include="Assets\SplashScreen.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\System\GuestSilhouette.png" />
+    <Content Include="Assets\WidePinTile.png" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
